@@ -2,6 +2,7 @@ mkdir -p output
 rm -rf output/*
 
 cp gui/* output/
+cp gui/.htaccess output/
 
 mkdir -p output/images
 
