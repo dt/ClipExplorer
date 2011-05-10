@@ -8,7 +8,7 @@ mkdir -p output/images
 size="ntsc"
 rate=".2"
 
-ffmpeg -i $1 -f webm -s $size output/video.webm
+ffmpeg -threads 2 -i $1 -f webm -s $size output/video.webm
 ffmpeg -i $1 -r $rate -s $size -f image2 output/images/%02d.jpg
 
 
