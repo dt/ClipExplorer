@@ -1,7 +1,7 @@
 Generates a storyboard from a video file which allows quickly viewing larger frames and/or playing of individual video segments.
 
 Running "script/process.sh <path/to/video_file>" should generate a folder "output" which contains a webpage and supporting files. A browser pointed at the index.html (either locally or served via a webserver) file should take care of the rest.
-
+	
 Example:
 	wget <video URL>
 	./scripts/process.sh <filename>
