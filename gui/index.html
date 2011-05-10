@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Video Browser</title>
+  <script src="jquery.js"></script>
+  <script src="image_list.js"></script>
+  <script src="browser.js"></script>
+  <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+<body>
+<div id="main">
+	<div id="title">Video Browser: tap image to enlarge/shrink -- tap timestamp in corner to play</div>
+	<div id="video">
+		<a id="playon" class="controls" href="#">Keep Playing</a>
+		<a id="shutup" class="controls" href="#">Stop</a>
+		<video src="video.webm" id="player">
+			Your browser does not support HTML5 video.
+		</video>
+		<div class="clear"></div>
+	</div>
+
+	<div id="frames" class="preview">
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+
+</html>

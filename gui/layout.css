@@ -1,0 +1,76 @@
+body {
+	color: #000000;
+	font-family: "Lucida Grande", Helvetica, Arial, Georga, 'Bitstream Vera Sans', sans-serif;
+	font-size: 0.8em;
+	background-color: #cdcdcd;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+#main {
+	background-color: #ffffff;
+	border: 1px solid #999999;
+	margin: 10px;
+	padding: 10px;
+}
+
+a { 
+	color: #006699;
+	text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+h6, h5, h4, h3, h2, h1, .title { color: #6993BA; font-weight: normal; margin:5px 0; }
+img {border: none;}
+
+.clear { clear: both;}
+
+#video { 
+	position: relative;
+	width: 100%;
+}
+
+#video .controls { 
+	display:block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: #333333;
+	opacity: .6;
+	color: #ffffff;
+}
+
+#video #player {
+	width: 720px;
+	margin:0px auto;
+}
+
+.frame {
+	border: 1px dotted #eeeeee;
+	padding: 10px;
+	margin: 10px; 
+	float: left;
+}
+
+.frame { position: relative;}
+
+.frame .ts {
+	display:block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #333333;
+	opacity: .5;
+	color: #ffffff;
+}
+
+.preview .frame img {
+	height: 150px;
+	width: 200px;
+}
+
+.zoom .frame { display: none;}
+.zoom .zoomed { display: block;}
