@@ -1,6 +1,5 @@
-
 mkdir -p output
-rm -rf output/*.*
+rm -rf output/*
 
 cp gui/* output/
 
