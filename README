@@ -1,4 +1,27 @@
-example:
-wget <URL>
-./scripts/process.sh <filename>
-firefox output/index.html
+Generates a storyboard from a video file which allows quickly viewing larger frames and/or playing of individual video segments.
+
+Running "script/process.sh <path/to/video_file>" should generate a folder "output" which contains a webpage and supporting files. A browser pointed at the index.html (either locally or served via a webserver) file should take care of the rest.
+	
+Example:
+	wget <video URL>
+	./scripts/process.sh <filename>
+	firefox output/index.html
+
+Dependencies:
+	ffmpeg
+	Webbrowser with HTML5 video & webm codec support
+
+Notes:
+	It doesn't work on iPhone/iPad/Safari/IE
+		Switch format to x264 instead of webm in script/process.sh. 
+
+	Frames are squished/streched
+		An aspect-ratio preserving resize (using -vf "scale=-1:700") requires a newer version of ffmpeg, so I'm using a predetermined size. Change it in script/process.sh if you need to.
+
+	Too many/too few frames
+		The second argument to script/process sets the frame rate. Default is .2 fps, so a frame every 5s.
+	
+	Video plays locally, not from web
+		If video playback works locally but not when the "output" directory is served from a webserver, you probably need to enable the correct mimetype (a .htaccess file was included to do this for you, but your webserver may not be using it). Either allow htaccess overrides, or copy the AddType from htaccess to your apache config.
+
+
