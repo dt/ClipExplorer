@@ -1,0 +1,4 @@
+example:
+wget <URL>
+./scripts/process.sh <filename>
+firefox output/index.html
