@@ -1,13 +1,13 @@
 function playSegment(x) {
 	return function() {
-		$("#frames").fadeOut();
-		$("#video").fadeIn();
+		$("#frames").hide();
+		$("#video").show();
 		$("#player").get(0).currentTime = x;
 		$("#player").get(0).play();
 		tm = setTimeout(function() {
 			$("#player").get(0).pause();
-			$("#video").fadeOut();
-			$("#frames").fadeIn();
+			$("#video").hide();
+			$("#frames").show();
 		}, 6000);
 		$("#playon").show();
 	}
@@ -27,8 +27,8 @@ $(document).ready(function() {
 		$("#playon").show();
 		$("#shutup").hide();
 		$("#player").get(0).pause();
-		$("#video").fadeOut();
-		$("#frames").fadeIn();
+		$("#video").hide();
+		$("#frames").show();
 	});
 	
 	for(i in image_list){
