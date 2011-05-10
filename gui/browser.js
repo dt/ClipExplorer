@@ -1,4 +1,4 @@
-function playSegment(x, d) {
+function playSegment(x) {
 	return function() {
 		$("#frames").fadeOut();
 		$("#video").fadeIn();
